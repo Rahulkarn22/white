@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Research</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #000000; /* Black background */
+            color: #e0e0e0; /* Default text color */
+        }
+        header { 
+            background: #000000; 
+            color: #fff; 
+            padding: 20px 0; 
+            text-align: left; /* Align text to the left */
+            padding-left: 20px; /* Add padding to the left */
+        }
+        nav a { 
+            margin: 0 15px; 
+            color: #bb86fc; 
+            text-decoration: none; 
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content { 
+            padding: 20px; 
+        }
+        footer { 
+            background: #000000; 
+            color: #fff; 
+            text-align: center; 
+            padding: 10px 0; 
+        }
+        .logo {
+            width: 150px; /* Adjust logo size as needed */
+            height: auto; 
+            display: block;
+            margin: 0 auto; /* Center the logo */
+        }
+        .heartbeat-logo {
+            font-size: 100px; 
+            font-weight: bold; 
+            color: #e0e0e0; /* Keep text color unchanged */
+            animation: heartbeat 2.5s infinite; /* Slower heartbeat */
+            position: relative; /* Ensure it stays inside the screen */
+            left: 0; /* Align to the left */
+        }
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02); /* Slightly smaller scale to keep it subtle */
+            }
+        }
+        .registration-form { 
+            margin-top: 20px; 
+            background: #000000; /* Make background black */
+            padding: 15px; 
+            border-radius: 15px; /* Rounded edges */
+            color: #e0e0e0;
+        }
+        input[type="text"], input[type="email"], input[type="phone"], input[type="file"] {
+            width: 100%; 
+            padding: 10px; 
+            margin: 10px 0; 
+            border: 1px solid #444; 
+            border-radius: 10px; /* Rounded edges */
+            background: #222; 
+            color: #e0e0e0; 
+        }
+        input[type="text"]:focus, input[type="email"]:focus, input[type="phone"]:focus, input[type="file"]:focus {
+            color: #bb86fc; /* Purple input text color when user types */
+            border-color: #bb86fc; /* Purple border when input is focused */
+        }
+        input[type="submit"] {
+            background: #bb86fc; 
+            color: #121212; 
+            border: none; 
+            padding: 10px; 
+            cursor: pointer; 
+            border-radius: 10px; /* Rounded edges */
+        }
+        input[type="submit"]:hover {
+            background: #9b59b6; 
+        }
+    </style>
+</head>
+<body ondblclick="toggleFullScreen()"> <!-- Trigger fullscreen on double-click -->
+    <header>
+        <img src="Designer.png" alt="White Hat Logo" class="logo">
+        <h1 class="heartbeat-logo">Reethiink</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#research" onclick="alertComingSoon()">Research</a> <!-- Research alert -->
+            <a href="#chat" onclick="alertComingSoon()">Chat</a> <!-- Chat alert -->
+            <a href="#career" onclick="alertCareer()">Career</a> <!-- Career alert -->
+            <a href="#contact" onclick="alertContact()">Contact</a> <!-- Contact alert -->
+        </nav>
+    </header>
+    <div class="content">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are focused on welcoming freshers into the cybersecurity field. Our aim is to provide opportunities for those seeking internships in cybersecurity. Interns can work with us for as long as they wish, but a minimum commitment is required to receive official recognition for your internship.</p>
+        </section>
+        <section id="career" class="registration-form">
+            <h2>Open Position: Intern</h2>
+            <p>If you're interested in joining our team, please fill out the form below:</p>
+            <form>
+                <label for="full-name">Full Name:</label><br>
+                <input type="text" id="full-name" name="full-name" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="phone">Phone Number:</label><br>
+                <input type="text" id="phone" name="phone" required><br>
+                <label for="resume">Upload Resume:</label><br>
+                <input type="file" id="resume" name="resume" required><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:rg5876689@gmail.com">rg5876689@gmail.com</a></p> <!-- Display email link -->
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Cybersecurity Research. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // Alerts for navigation
+        function alertComingSoon() {
+            alert("This feature is coming soon!");
+        }
+
+        function alertCareer() {
+            alert("Intern position available. Please fill the form.");
+        }
+
+        function alertContact() {
+            alert("Contact us at rg5876689@gmail.com");
+        }
+    </script>
+</body>
+</html>
